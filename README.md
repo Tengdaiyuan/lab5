@@ -4,6 +4,8 @@ Three self-contained browser exercises from the Lab Practical sheet, written wit
 plain HTML, CSS and JavaScript. No frameworks, no build step, no dependencies &mdash;
 open a file and it runs.
 
+**Live demo:** <https://tengdaiyuan.github.io/lab5/>
+
 | # | Exercise | Topic | Source |
 |---|----------|-------|--------|
 | 1 | [The HTML5 Canvas](exercise1-canvas/) | `<canvas>` + 2D drawing API | [`smiley.js`](exercise1-canvas/smiley.js) |
