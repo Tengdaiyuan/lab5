@@ -1,0 +1,307 @@
+/* Shared styling for all three Lab 5 exercises. */
+
+:root {
+  --bg: #f4f7f4;
+  --surface: #ffffff;
+  --ink: #1d2b22;
+  --muted: #5d6f63;
+  --accent: #1f7a1f;
+  --accent-soft: #e6f4e6;
+  --border: #d8e3d8;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(23, 51, 32, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 20px 64px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.site-header,
+main,
+.site-footer {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: 40px 0 8px;
+}
+
+.site-header h1 {
+  margin: 8px 0 6px;
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  line-height: 1.2;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+}
+
+.back {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+.card {
+  margin-top: 24px;
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.lead {
+  margin: 0 0 16px;
+  font-size: 1.05rem;
+}
+
+.hint {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+code {
+  padding: 1px 5px;
+  background: var(--accent-soft);
+  border-radius: 5px;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.9em;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+
+.btn:hover {
+  background: #176417;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:focus-visible {
+  outline: 3px solid #9ccf9c;
+  outline-offset: 2px;
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--muted);
+}
+
+.btn-ghost:hover {
+  background: #f1f5f1;
+  color: var(--ink);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+/* ---------- Exercise 1: canvas ---------- */
+
+canvas {
+  display: block;
+  width: min(100%, 600px);
+  height: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #90ee90;
+}
+
+/* ---------- Exercise 2: geolocation ---------- */
+
+.output {
+  min-height: 3.2rem;
+  margin: 20px 0 0;
+  padding: 14px 16px;
+  background: #f7fbf7;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+/* ---------- Exercise 3: to-do list ---------- */
+
+.task-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.task-input {
+  flex: 1 1 220px;
+  min-width: 0;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fbfdfb;
+  color: var(--ink);
+  font: inherit;
+}
+
+.task-input:focus {
+  outline: 2px solid #9ccf9c;
+  outline-offset: 1px;
+  border-color: var(--accent);
+}
+
+.task-list {
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.task-item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.task-text {
+  flex: 1;
+  word-break: break-word;
+}
+
+.task-delete {
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #9a9a9a;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.task-delete:hover {
+  background: #fdeaea;
+  color: #c0392b;
+}
+
+.empty-state {
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.task-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.site-footer {
+  padding-top: 32px;
+}
+
+.site-footer a {
+  color: var(--accent);
+}
+
+/* ---------- Utilities ---------- */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Index page ---------- */
+
+.exercise-list {
+  display: grid;
+  gap: 16px;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.exercise-card {
+  display: block;
+  padding: 20px 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.12s ease, border-color 0.12s ease;
+}
+
+.exercise-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.exercise-card h2 {
+  margin: 0 0 4px;
+  font-size: 1.1rem;
+}
+
+.exercise-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+@media (max-width: 520px) {
+  .card {
+    padding: 20px;
+  }
+}

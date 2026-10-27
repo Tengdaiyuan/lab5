@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 2 &ndash; HTML5 Geolocation</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="back" href="../index.html">&larr; Lab 5</a>
+    <h1>Exercise 2 &ndash; HTML5 Geolocation</h1>
+    <p class="subtitle">Ask the browser for the device position and show the coordinates on the page.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <p class="lead">Click the button to get your coordinates:</p>
+
+      <button type="button" class="btn" onclick="getGeolocation()">Get Geolocation</button>
+
+      <!-- The script writes the coordinates into this paragraph. -->
+      <p id="geolocation" class="output" role="status" aria-live="polite"></p>
+
+      <p class="hint">
+        The browser asks for permission the first time. If the page is opened from
+        <code>file://</code> some browsers block the request &mdash; serve it over
+        <code>http://localhost</code> or <code>https://</code> instead.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a href="../index.html">Lab 5 home</a>
+  </footer>
+
+  <!-- Loaded at the end of <body> so getElementById() finds #geolocation. -->
+  <script src="geolocation.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 1 &ndash; The HTML5 Canvas</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="back" href="../index.html">&larr; Lab 5</a>
+    <h1>Exercise 1 &ndash; The HTML5 Canvas</h1>
+    <p class="subtitle">A smiley face and a caption, drawn entirely with JavaScript on a &lt;canvas&gt;.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <!-- The canvas is sized in HTML attributes; style only controls how big it is on screen. -->
+      <canvas id="smileyFace" width="600" height="560"
+              aria-label="Smiley face drawn on an HTML5 canvas with the text: The Canvas brought me to life!"></canvas>
+
+      <p class="hint">
+        Everything above is painted by <code>smiley.js</code> through the
+        <code>CanvasRenderingContext2D</code> API &mdash; no images, no CSS shapes.
+      </p>
+
+      <div class="actions">
+        <button type="button" id="redrawButton" class="btn">Redraw</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a href="../index.html">Lab 5 home</a>
+  </footer>
+
+  <script src="smiley.js"></script>
+</body>
+</html>

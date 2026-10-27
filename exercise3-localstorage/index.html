@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 3 &ndash; To-Do List with Local Storage</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="back" href="../index.html">&larr; Lab 5</a>
+    <h1>Exercise 3 &ndash; To-Do List with Local Storage</h1>
+    <p class="subtitle">Add and remove tasks; the list survives closing the browser.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <form id="taskForm" class="task-form" autocomplete="off">
+        <label class="sr-only" for="taskInput">New task</label>
+        <input id="taskInput" class="task-input" type="text" placeholder="e.g. task 3" maxlength="120">
+        <button type="submit" class="btn">Add Task</button>
+      </form>
+
+      <ul id="taskList" class="task-list"></ul>
+
+      <p id="taskEmpty" class="empty-state">No tasks yet &mdash; add your first one above.</p>
+
+      <div class="task-meta">
+        <span id="taskCount">0 tasks</span>
+        <button type="button" id="clearButton" class="btn btn-ghost">Clear all</button>
+      </div>
+
+      <p class="hint">
+        Tasks are stored as JSON under the <code>lab5.todo.tasks</code> key in
+        <code>localStorage</code>. Reload the page (or reopen the browser) and they are still here.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a href="../index.html">Lab 5 home</a>
+  </footer>
+
+  <script src="todo.js"></script>
+</body>
+</html>
